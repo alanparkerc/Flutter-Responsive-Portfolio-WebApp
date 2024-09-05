@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/res/constants.dart';
 
 import 'knowledge.dart';
 
@@ -13,7 +14,10 @@ class Knowledges extends StatelessWidget {
         Divider(),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
-          child: Text('Knowledge',style: TextStyle(color: Colors.white),),
+          child: Text(
+            'Knowledge',
+            style: TextStyle(color: darkColor),
+          ),
         ),
         KnowledgeText(knowledge: 'Flutter, Dart'),
         KnowledgeText(knowledge: 'Networking, Cyber Security'),
@@ -21,5 +25,4 @@ class Knowledges extends StatelessWidget {
       ],
     );
   }
-
 }

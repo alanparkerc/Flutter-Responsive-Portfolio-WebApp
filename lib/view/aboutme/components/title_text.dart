@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/res/constants.dart';
+
 import '../../../view model/responsive.dart';
 
 class TitleText extends StatelessWidget {

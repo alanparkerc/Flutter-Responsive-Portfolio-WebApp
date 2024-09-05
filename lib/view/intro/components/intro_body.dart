@@ -7,6 +7,7 @@ import 'combine_subtitle.dart';
 import 'description_text.dart';
 import 'download_button.dart';
 import 'headline_text.dart';
+
 class IntroBody extends StatelessWidget {
   const IntroBody({super.key});
   @override
@@ -57,6 +58,14 @@ class IntroBody extends StatelessWidget {
                 mobile: AnimatedDescriptionText(start: 14, end: 12),
                 tablet: AnimatedDescriptionText(start: 17, end: 14),
               ),
+              const SizedBox(
+                height: defaultPadding * 2,
+              ),
+              const DownloadButton(),
+              const SizedBox(
+                height: defaultPadding * 2,
+              ),
+              const DownloadButton(),
               const SizedBox(
                 height: defaultPadding * 2,
               ),
