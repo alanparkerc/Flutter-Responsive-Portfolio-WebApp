@@ -34,9 +34,9 @@ class MyApp extends StatelessWidget {
         ),
         home: MainView(pages: [
           const Introduction(),
+          AboutMeView(),
           ProjectsView(),
           Certifications(),
-          AboutMeView(),
         ]));
   }
 }

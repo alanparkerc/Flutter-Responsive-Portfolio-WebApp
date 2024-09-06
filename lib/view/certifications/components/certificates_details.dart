@@ -10,6 +10,7 @@ class CertificateStack extends StatelessWidget {
   final controller = Get.put(CertificationController());
   CertificateStack({super.key, required this.index});
   final int index;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -23,7 +24,7 @@ class CertificateStack extends StatelessWidget {
           height: double.infinity,
           width: double.infinity,
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), color: bgColor),
+              borderRadius: BorderRadius.circular(30), color: darkColor),
           duration: const Duration(milliseconds: 500),
           child: SingleChildScrollView(
             child: Column(

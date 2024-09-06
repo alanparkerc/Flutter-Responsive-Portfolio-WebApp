@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import '../../../res/constants.dart';
 import '../../../view model/responsive.dart';
-import 'animated_texts_componenets.dart';
+import 'animated_texts_components.dart';
 import 'combine_subtitle.dart';
 import 'description_text.dart';
 import 'download_button.dart';

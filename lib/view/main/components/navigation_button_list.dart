@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view%20model/controller.dart';
 import 'package:flutter_portfolio/view%20model/responsive.dart';
 
-import 'navigation_button.dart';
-
 class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
   @override
@@ -16,35 +14,55 @@ class NavigationButtonList extends StatelessWidget {
           scale: value,
           child: Row(
             children: [
-              NavigationTextButton(
-                  onTap: () {
+              TextButton(
+                  onPressed: () {
                     controller.animateToPage(0,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
-                  text: 'Home'),
+                  child: Text(
+                    'Home',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(255, 2, 2, 20)),
+                  )),
               if (!Responsive.isLargeMobile(context))
-                NavigationTextButton(
-                    onTap: () {
+                TextButton(
+                    onPressed: () {
                       controller.animateToPage(1,
                           duration: const Duration(milliseconds: 500),
                           curve: Curves.easeIn);
                     },
-                    text: 'About Me'),
-              NavigationTextButton(
-                  onTap: () {
+                    child: Text(
+                      'About Me',
+                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                          fontWeight: FontWeight.bold,
+                          color: const Color.fromARGB(255, 2, 2, 20)),
+                    )),
+              TextButton(
+                  onPressed: () {
                     controller.animateToPage(2,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
-                  text: 'Projects'),
-              NavigationTextButton(
-                  onTap: () {
+                  child: Text(
+                    'Projects',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(255, 2, 2, 20)),
+                  )),
+              TextButton(
+                  onPressed: () {
                     controller.animateToPage(3,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
-                  text: 'Certifications'),
+                  child: Text(
+                    'Achievements & History',
+                    style: Theme.of(context).textTheme.labelMedium!.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: const Color.fromARGB(255, 2, 2, 20)),
+                  )),
             ],
           ),
         );

@@ -5,6 +5,7 @@ class AreaInfoText extends StatelessWidget {
   const AreaInfoText({super.key, required this.title, required this.text});
   final String title;
   final String text;
+
   @override
   Widget build(BuildContext context) {
     return Padding(

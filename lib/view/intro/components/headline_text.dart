@@ -13,7 +13,7 @@ class MyPortfolioText extends StatelessWidget {
         builder: (context, value, child) {
           return Text('Chase Parker',
               style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                  color: Color(0xFF191923),
+                  color: const Color(0xFF191923),
                   fontWeight: FontWeight.w900,
                   height: 0,
                   fontSize: value));

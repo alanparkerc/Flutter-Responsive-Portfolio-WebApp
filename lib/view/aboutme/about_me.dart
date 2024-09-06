@@ -4,7 +4,6 @@ import 'package:flutter_portfolio/view%20model/getx_controllers/aboutme_controll
 import 'package:flutter_portfolio/view%20model/responsive.dart';
 import 'package:flutter_portfolio/view/aboutme/components/title_text.dart';
 import 'package:get/get.dart';
-import 'components/projects_grid.dart';
 
 class AboutMeView extends StatelessWidget {
   AboutMeView({super.key});
@@ -23,20 +22,7 @@ class AboutMeView extends StatelessWidget {
           const SizedBox(
             height: defaultPadding,
           ),
-          Expanded(
-              child: Responsive(
-                  desktop: ProjectGrid(
-                    crossAxisCount: 3,
-                  ),
-                  extraLargeScreen: ProjectGrid(
-                    crossAxisCount: 4,
-                  ),
-                  largeMobile: ProjectGrid(crossAxisCount: 1, ratio: 1.8),
-                  mobile: ProjectGrid(crossAxisCount: 1, ratio: 1.5),
-                  tablet: ProjectGrid(
-                    ratio: 1.4,
-                    crossAxisCount: 2,
-                  )))
+          const Expanded(child: Text('plaeholder'))
         ],
       ),
     );

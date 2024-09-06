@@ -1,27 +1,59 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/res/constants.dart';
-
-import 'knowledge.dart';
+import 'package:flutter_svg/svg.dart';
 
 class Knowledges extends StatelessWidget {
   const Knowledges({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Divider(),
-        Padding(
+        const Divider(),
+        const Padding(
           padding: EdgeInsets.symmetric(vertical: 10),
           child: Text(
             'Knowledge',
             style: TextStyle(color: darkColor),
           ),
         ),
-        KnowledgeText(knowledge: 'Flutter, Dart'),
-        KnowledgeText(knowledge: 'Networking, Cyber Security'),
-        KnowledgeText(knowledge: 'Git, Github'),
+        Padding(
+          padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+          child: Row(
+            children: [
+              SvgPicture.asset('assets/icons/check.svg'),
+              const SizedBox(
+                width: defaultPadding / 2,
+              ),
+              const Text('Flutter, Dart'),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+          child: Row(
+            children: [
+              SvgPicture.asset('assets/icons/check.svg'),
+              const SizedBox(
+                width: defaultPadding / 2,
+              ),
+              const Text('Networking, Cyber Security'),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+          child: Row(
+            children: [
+              SvgPicture.asset('assets/icons/check.svg'),
+              const SizedBox(
+                width: defaultPadding / 2,
+              ),
+              const Text('Git, Github'),
+            ],
+          ),
+        )
       ],
     );
   }

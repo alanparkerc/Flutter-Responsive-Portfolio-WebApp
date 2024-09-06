@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/view/projects/components/project_info.dart';
+import 'package:flutter_portfolio/view/projects/components/image_viewer.dart';
+import 'package:flutter_portfolio/view/projects/components/project_detail.dart';
 import 'package:get/get.dart';
 import '../../../model/project_model.dart';
 import '../../../res/constants.dart';
 import '../../../view model/getx_controllers/projects_controller.dart';
+
 class ProjectGrid extends StatelessWidget {
   final int crossAxisCount;
   final double ratio;
-  ProjectGrid({super.key, this.crossAxisCount = 3,  this.ratio=1.3});
+  ProjectGrid({super.key, this.crossAxisCount = 3, this.ratio = 1.3});
   final controller = Get.put(ProjectController());
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
       padding: const EdgeInsets.symmetric(horizontal: 30),
       itemCount: projectList.length,
-      gridDelegate:  SliverGridDelegateWithFixedCrossAxisCount(
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: crossAxisCount, childAspectRatio: ratio),
       itemBuilder: (context, index) {
         return Obx(() => AnimatedContainer(
@@ -27,19 +29,39 @@ class ProjectGrid extends StatelessWidget {
                   Colors.pinkAccent,
                   Colors.blue,
                 ]),
-                boxShadow:  [
+                boxShadow: [
                   BoxShadow(
                     color: Colors.pink,
                     offset: const Offset(-2, 0),
                     blurRadius: controller.hovers[index] ? 20 : 10,
                   ),
                   BoxShadow(
-                      color: Colors.blue,
-                      offset: const Offset(2, 0),
-                      blurRadius: controller.hovers[index] ? 20 : 10,),
+                    color: Colors.blue,
+                    offset: const Offset(2, 0),
+                    blurRadius: controller.hovers[index] ? 20 : 10,
+                  ),
                 ]),
-            child: ProjectStack(index: index)
-        ));
+            child: InkWell(
+              onHover: (value) {
+                controller.onHover(index, value);
+              },
+              onTap: () {
+                ImageViewer(context, projectList[index].image);
+              },
+              borderRadius: BorderRadius.circular(30),
+              child: AnimatedContainer(
+                padding: const EdgeInsets.only(
+                    left: defaultPadding,
+                    right: defaultPadding,
+                    top: defaultPadding),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30), color: darkColor),
+                duration: const Duration(milliseconds: 500),
+                child: ProjectDetail(
+                  index: index,
+                ),
+              ),
+            )));
       },
     );
   }

@@ -19,7 +19,7 @@ class Certifications extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: 'Certifications & ', title: 'License'),
+          const TitleText(prefix: 'Achievements & ', title: 'History'),
           const SizedBox(
             height: defaultPadding,
           ),
