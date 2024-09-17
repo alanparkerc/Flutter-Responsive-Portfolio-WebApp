@@ -81,7 +81,7 @@ class MySkills extends StatelessWidget {
             Row(
               children: [
                 Image.asset(
-                  'assets/icons/dart.png',
+                  'assets/icons/sql.png',
                   height: 15,
                   width: 15,
                   fit: BoxFit.cover,
@@ -90,7 +90,7 @@ class MySkills extends StatelessWidget {
                   width: 5,
                 ),
                 const Text(
-                  'Sqlite',
+                  'SQL',
                   style: TextStyle(color: darkColor),
                 ),
                 const Spacer(),

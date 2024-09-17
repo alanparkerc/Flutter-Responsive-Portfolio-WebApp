@@ -56,19 +56,14 @@ class CertificateGrid extends StatelessWidget {
                         const SizedBox(
                           height: defaultPadding,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              achievementList[index].organization,
-                              style: const TextStyle(color: Colors.amber),
-                            ),
-                            Text(
-                              achievementList[index].date,
-                              style: const TextStyle(
-                                  color: Colors.grey, fontSize: 12),
-                            ),
-                          ],
+                        Text(
+                          achievementList[index].organization,
+                          style: const TextStyle(color: Colors.amber),
+                        ),
+                        Text(
+                          achievementList[index].date,
+                          style:
+                              const TextStyle(color: Colors.grey, fontSize: 12),
                         ),
                         const SizedBox(
                           height: defaultPadding / 2,
@@ -76,7 +71,7 @@ class CertificateGrid extends StatelessWidget {
                         Text.rich(
                           maxLines: 1,
                           TextSpan(
-                              text: 'Skills : ',
+                              text: 'Skills: ',
                               style: const TextStyle(
                                 color: Colors.white,
                               ),

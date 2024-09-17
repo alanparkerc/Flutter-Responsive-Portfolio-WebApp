@@ -2,10 +2,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../../constants.dart';
 import '../../view model/responsive.dart';
-import 'certification_grid.dart';
+import 'achievement_grid.dart';
 
-class Certifications extends StatelessWidget {
-  const Certifications({super.key});
+class Achievements extends StatelessWidget {
+  const Achievements({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +45,7 @@ class Certifications extends StatelessWidget {
                         'History',
                         style:
                             Theme.of(context).textTheme.titleMedium!.copyWith(
-                                color: Colors.white,
+                                color: Colors.black,
                                 fontSize: !Responsive.isDesktop(context)
                                     ? Responsive.isLargeMobile(context)
                                         ? 20
@@ -57,7 +57,7 @@ class Certifications extends StatelessWidget {
                   : Text(
                       'History',
                       style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontSize: !Responsive.isDesktop(context)
                               ? Responsive.isLargeMobile(context)
                                   ? 20

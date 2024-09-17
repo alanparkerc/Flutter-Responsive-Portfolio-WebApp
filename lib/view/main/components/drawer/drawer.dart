@@ -4,7 +4,7 @@ import 'package:flutter_portfolio/view/main/components/drawer/personal_info.dart
 import '../../../../constants.dart';
 import 'knowledges.dart';
 import 'about.dart';
-import 'my_skill.dart';
+import 'skills.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
