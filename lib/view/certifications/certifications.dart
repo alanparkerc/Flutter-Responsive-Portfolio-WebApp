@@ -1,14 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/view%20model/getx_controllers/certification_controller.dart';
-import 'package:flutter_portfolio/view/projects/components/title_text.dart';
-import 'package:get/get.dart';
-import '../../res/constants.dart';
+import '../../constants.dart';
 import '../../view model/responsive.dart';
-import 'components/certification_grid.dart';
+import 'certification_grid.dart';
 
 class Certifications extends StatelessWidget {
-  final controller = Get.put(CertificationController());
-  Certifications({super.key});
+  const Certifications({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +16,61 @@ class Certifications extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: 'Achievements & ', title: 'History'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Achievements & ',
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: darkColor,
+                    fontSize: !Responsive.isDesktop(context)
+                        ? Responsive.isLargeMobile(context)
+                            ? 20
+                            : 30
+                        : 50,
+                    fontWeight: FontWeight.bold),
+              ),
+              kIsWeb && Responsive.isDesktop(context)
+                  ? ShaderMask(
+                      shaderCallback: (bounds) {
+                        return const LinearGradient(
+                            end: Alignment.centerRight,
+                            begin: Alignment.centerLeft,
+                            colors: [
+                              Colors.pink,
+                              Colors.cyanAccent,
+                            ]).createShader(bounds);
+                      },
+                      child: Text(
+                        'History',
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                color: Colors.white,
+                                fontSize: !Responsive.isDesktop(context)
+                                    ? Responsive.isLargeMobile(context)
+                                        ? 20
+                                        : 30
+                                    : 50,
+                                fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  : Text(
+                      'History',
+                      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                          color: Colors.white,
+                          fontSize: !Responsive.isDesktop(context)
+                              ? Responsive.isLargeMobile(context)
+                                  ? 20
+                                  : 30
+                              : 50,
+                          fontWeight: FontWeight.bold),
+                    ),
+            ],
+          ),
           const SizedBox(
             height: defaultPadding,
           ),
-          Expanded(
+          const Expanded(
               child: Responsive(
                   desktop: CertificateGrid(
                     crossAxisCount: 3,

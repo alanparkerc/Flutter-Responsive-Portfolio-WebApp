@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../res/constants.dart';
+import '../../../constants.dart';
 import '../../../view model/responsive.dart';
 
 class AnimatedImageContainer extends StatefulWidget {
@@ -48,18 +48,6 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                 Colors.pinkAccent,
                 Colors.blue,
               ]),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.pink,
-                  offset: Offset(-2, 0),
-                  blurRadius: 20,
-                ),
-                BoxShadow(
-                  color: Colors.blue,
-                  offset: Offset(2, 0),
-                  blurRadius: 20,
-                ),
-              ],
             ),
             child: Container(
               alignment: Alignment.center,
@@ -68,7 +56,7 @@ class AnimatedImageContainerState extends State<AnimatedImageContainer>
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Image.asset(
-                'assets/images/profile.png',
+                'assets/images/image.png',
                 height: Responsive.isLargeMobile(context)
                     ? MediaQuery.sizeOf(context).width * 0.2
                     : Responsive.isTablet(context)

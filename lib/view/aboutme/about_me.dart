@@ -1,13 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/res/constants.dart';
-import 'package:flutter_portfolio/view%20model/getx_controllers/aboutme_controller.dart';
+import 'package:flutter_portfolio/constants.dart';
 import 'package:flutter_portfolio/view%20model/responsive.dart';
-import 'package:flutter_portfolio/view/aboutme/components/title_text.dart';
-import 'package:get/get.dart';
 
 class AboutMeView extends StatelessWidget {
-  AboutMeView({super.key});
-  final controller = Get.put(AboutMeController());
+  const AboutMeView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +14,22 @@ class AboutMeView extends StatelessWidget {
             const SizedBox(
               height: defaultPadding,
             ),
-          const TitleText(prefix: 'About', title: 'Me'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'About Me',
+                style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: darkColor,
+                    fontSize: !Responsive.isDesktop(context)
+                        ? Responsive.isLargeMobile(context)
+                            ? 20
+                            : 30
+                        : 50,
+                    fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
           const SizedBox(
             height: defaultPadding,
           ),

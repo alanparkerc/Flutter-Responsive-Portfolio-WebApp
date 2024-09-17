@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../res/constants.dart';
+import '../../../../constants.dart';
 
 class MySkills extends StatelessWidget {
   const MySkills({super.key});

@@ -1,11 +1,11 @@
-class CertificateModel {
+class AchievementModel {
   final String name;
   final String organization;
   final String date;
   final String skills;
   final String credential;
 
-  CertificateModel({
+  AchievementModel({
     required this.name,
     required this.organization,
     required this.date,
@@ -14,45 +14,40 @@ class CertificateModel {
   });
 }
 
-List<CertificateModel> certificateList = [
-  CertificateModel(
+List<AchievementModel> achievementList = [
+  AchievementModel(
     name: 'Getting started with Flutter Development',
     organization: 'Coursera',
     date: 'AUG 2023',
     skills: 'Flutter . Dart',
-    credential:
-        'https://www.coursera.org/account/accomplishments/certificate/HQ4LFHSF4LKZ',
+    credential: '',
   ),
-  CertificateModel(
+  AchievementModel(
     name: 'Flutter Essential Training: Build for Multiple Platforms',
     organization: 'LinkedIn',
     date: 'JUL 2023',
     skills: 'Flutter . iOS Development . Android Development',
-    credential:
-        'https://www.linkedin.com/learning/certificates/450fc4e2f495726aea50a067caf586869ccf0cb92ebcc5a4c7b5648a95754a8f',
+    credential: '',
   ),
-  CertificateModel(
+  AchievementModel(
     name: 'Complete Dart Learning',
     organization: 'Udemy',
     date: 'JUN 2023',
     skills: 'Flutter . Dart . Programming',
-    credential:
-        'https://www.udemy.com/certificate/UC-5b01c756-0d20-4342-94e6-9d5860d1c95e/',
+    credential: '',
   ),
-  CertificateModel(
+  AchievementModel(
     name: 'Flutter REST Movie App',
     organization: 'Udemy',
     date: 'AUG 2023',
     skills: 'Flutter . Rest API\'s . Cloud',
-    credential:
-        'https://www.udemy.com/certificate/UC-22efc7ca-3df5-4f26-8025-4a1bd2672f19/',
+    credential: '',
   ),
-  CertificateModel(
+  AchievementModel(
     name: 'Modularizing and Organizing Flutter Code',
     organization: 'LinkedIn',
     date: 'JUL 2023',
     skills: 'Flutter . Clean Architecture',
-    credential:
-        'https://www.linkedin.com/learning/certificates/686276fa42629d4f1291da79ea46bfde0222954b60297a2e728c770768f23407',
+    credential: '',
   ),
 ];

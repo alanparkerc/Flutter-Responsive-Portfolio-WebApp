@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/res/constants.dart';
+import 'package:flutter_portfolio/constants.dart';
 import 'package:flutter_portfolio/view/aboutme/about_me.dart';
 import 'package:flutter_portfolio/view/certifications/certifications.dart';
 import 'package:flutter_portfolio/view/intro/introduction.dart';
@@ -19,8 +19,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           dialogBackgroundColor: bgColor,
-          colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 183, 118, 58)),
           scaffoldBackgroundColor: bgColor,
           useMaterial3: true,
           textTheme: GoogleFonts.openSansTextTheme(Theme.of(context).textTheme)
@@ -32,8 +30,8 @@ class MyApp extends StatelessWidget {
                 bodyMedium: const TextStyle(color: bodyTextColor),
               ),
         ),
-        home: MainView(pages: [
-          const Introduction(),
+        home: const MainView(pages: [
+          Introduction(),
           AboutMeView(),
           ProjectsView(),
           Certifications(),

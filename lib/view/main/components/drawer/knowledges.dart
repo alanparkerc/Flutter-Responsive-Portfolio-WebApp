@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/res/constants.dart';
+import 'package:flutter_portfolio/constants.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Knowledges extends StatelessWidget {

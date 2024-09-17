@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../../res/constants.dart';
+import '../../../constants.dart';
 
 class ConnectButton extends StatelessWidget {
   const ConnectButton({super.key});
@@ -18,21 +18,12 @@ class ConnectButton extends StatelessWidget {
             height: 60,
             width: 150,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(defaultPadding),
-                gradient: LinearGradient(colors: [
-                  Colors.pink,
-                  Colors.blue.shade900,
-                ]),
-                boxShadow: const [
-                  BoxShadow(
-                      color: Colors.blue,
-                      offset: Offset(0, -1),
-                      blurRadius: defaultPadding / 4),
-                  BoxShadow(
-                      color: Colors.red,
-                      offset: Offset(0, 1),
-                      blurRadius: defaultPadding / 4),
-                ]),
+              borderRadius: BorderRadius.circular(defaultPadding),
+              gradient: LinearGradient(colors: [
+                Colors.pink,
+                Colors.blue.shade900,
+              ]),
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
