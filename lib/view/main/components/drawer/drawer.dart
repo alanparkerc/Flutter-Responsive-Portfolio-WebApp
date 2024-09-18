@@ -4,7 +4,6 @@ import 'package:flutter_portfolio/view/main/components/drawer/personal_info.dart
 import '../../../../constants.dart';
 import 'knowledges.dart';
 import 'about.dart';
-import 'skills.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -18,19 +17,111 @@ class CustomDrawer extends StatelessWidget {
             const About(),
             Container(
               color: bgColor,
-              child: const Padding(
-                padding: EdgeInsets.all(defaultPadding / 2),
+              child: Padding(
+                padding: const EdgeInsets.all(defaultPadding / 2),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    PersonalInfo(),
-                    MySkills(),
-                    Knowledges(),
-                    Divider(),
-                    SizedBox(
+                    const PersonalInfo(),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/flutter.png',
+                                  height: 15,
+                                  width: 15,
+                                  fit: BoxFit.cover,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  'Flutter',
+                                  style: TextStyle(color: darkColor),
+                                ),
+                                const Spacer(),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/dart.png',
+                                  height: 15,
+                                  width: 15,
+                                  fit: BoxFit.cover,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  'Dart',
+                                  style: TextStyle(color: darkColor),
+                                ),
+                                const Spacer(),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/firebase.png',
+                                  height: 15,
+                                  width: 15,
+                                  fit: BoxFit.cover,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  'Firebase',
+                                  style: TextStyle(color: darkColor),
+                                ),
+                                const Spacer(),
+                              ],
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Row(
+                              children: [
+                                Image.asset(
+                                  'assets/icons/sql.png',
+                                  height: 15,
+                                  width: 15,
+                                  fit: BoxFit.cover,
+                                ),
+                                const SizedBox(
+                                  width: 5,
+                                ),
+                                const Text(
+                                  'SQL',
+                                  style: TextStyle(color: darkColor),
+                                ),
+                                const Spacer(),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    const Knowledges(),
+                    const Divider(),
+                    const SizedBox(
                       height: defaultPadding,
                     ),
-                    ContactIcon(),
+                    const ContactIcon(),
                   ],
                 ),
               ),
