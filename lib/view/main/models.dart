@@ -1,3 +1,37 @@
+class AchievementModel {
+  final String name;
+  final String organization;
+  final String date;
+  final String skills;
+  final String credential;
+
+  AchievementModel({
+    required this.name,
+    required this.organization,
+    required this.date,
+    required this.skills,
+    required this.credential,
+  });
+}
+
+List<AchievementModel> achievementList = [
+  AchievementModel(
+    name: 'Bachelor\'s of Science in Computer Science (transferred)',
+    organization: 'San Diego State University',
+    date: 'Aug 2017 - Dec 2020',
+    skills: 'Java - C# - Python',
+    credential: 'Software Develop Cycle - Video Game Design - Algorithms',
+  ),
+  AchievementModel(
+    name:
+        'Bachelor\'s of Science in Applied Computer Science (Focus: Security)',
+    organization: 'Oregon State University',
+    date: 'Graduated Jul 2023',
+    skills: 'Flutter/Dart - HTML/CSS/JS - C/C++',
+    credential: 'Web Applications - Database Management - Physics Engines',
+  ),
+];
+
 class Project {
   final String name;
   final String description;

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view/projects/components/project_link.dart';
-
-import '../../../model/project_model.dart';
+import '../../main/models.dart';
 import '../../../constants.dart';
 import '../../../view model/responsive.dart';
 

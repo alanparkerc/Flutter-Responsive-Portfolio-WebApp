@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/view/projects/components/image_viewer.dart';
 import 'package:flutter_portfolio/view/projects/components/project_detail.dart';
-import '../../../model/project_model.dart';
+import '../../main/models.dart';
 import '../../../constants.dart';
 
 class ProjectGrid extends StatelessWidget {

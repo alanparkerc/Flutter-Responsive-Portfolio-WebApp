@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import '../../model/achievement_model.dart';
+import '../main/models.dart';
 import '../../constants.dart';
 
 class CertificateGrid extends StatelessWidget {
@@ -22,10 +22,7 @@ class CertificateGrid extends StatelessWidget {
                 vertical: defaultPadding, horizontal: defaultPadding),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-              gradient: const LinearGradient(colors: [
-                Colors.pinkAccent,
-                Colors.blue,
-              ]),
+              border: Border.all(color: Colors.black),
             ),
             child: InkWell(
               onTap: () {},
@@ -36,7 +33,7 @@ class CertificateGrid extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
-                      color: darkColor),
+                      color: Colors.transparent),
                   duration: const Duration(milliseconds: 500),
                   child: SingleChildScrollView(
                     child: Column(
