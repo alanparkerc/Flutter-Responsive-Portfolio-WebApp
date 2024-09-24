@@ -99,7 +99,7 @@ class CertificateGrid extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Credentials',
+                                  'School Website',
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 10),
                                 ),

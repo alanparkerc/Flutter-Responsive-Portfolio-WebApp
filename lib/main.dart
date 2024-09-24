@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/constants.dart';
-import 'package:flutter_portfolio/view/aboutme/about_me.dart';
 import 'package:flutter_portfolio/view/achievements/achievements.dart';
 import 'package:flutter_portfolio/view/intro/introduction.dart';
 import 'package:flutter_portfolio/view/main/main_view.dart';
@@ -32,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
         home: const MainView(pages: [
           Introduction(),
-          AboutMeView(),
+          // AboutMeView(),
           ProjectsView(),
           Achievements(),
         ]));

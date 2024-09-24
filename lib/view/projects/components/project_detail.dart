@@ -19,9 +19,10 @@ class ProjectDetail extends StatelessWidget {
             projectList[index].name,
             style: Theme.of(context)
                 .textTheme
-                .headlineSmall!
+                .bodyLarge!
                 .copyWith(color: Colors.white, fontWeight: FontWeight.bold),
-            maxLines: 1,
+            maxLines: 2,
+            textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
           ),
         ),

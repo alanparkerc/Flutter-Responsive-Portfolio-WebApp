@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/view/main/components/drawer/drawer_image.dart';
 import '../../../constants.dart';
 import '../../../view model/responsive.dart';
-import 'animated_texts_components.dart';
 import 'combine_subtitle.dart';
 import 'description_text.dart';
 import 'download_button.dart';
@@ -30,10 +30,7 @@ class IntroBody extends StatelessWidget {
                     SizedBox(
                       width: size.width * 0.23,
                     ),
-                    const AnimatedImageContainer(
-                      width: 150,
-                      height: 200,
-                    ),
+                    const DrawerImage(),
                   ],
                 ),
               if (!Responsive.isDesktop(context))
@@ -62,19 +59,11 @@ class IntroBody extends StatelessWidget {
                 height: defaultPadding * 2,
               ),
               const DownloadButton(),
-              const SizedBox(
-                height: defaultPadding * 2,
-              ),
-              const DownloadButton(),
-              const SizedBox(
-                height: defaultPadding * 2,
-              ),
-              const DownloadButton(),
             ],
           ),
         ),
         const Spacer(),
-        if (Responsive.isDesktop(context)) const AnimatedImageContainer(),
+        if (Responsive.isDesktop(context)) const DrawerImage(),
         const Spacer()
       ],
     );

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/view%20model/controller.dart';
-import 'package:flutter_portfolio/view%20model/responsive.dart';
+import 'package:flutter_portfolio/constants.dart';
 
 class NavigationButtonList extends StatelessWidget {
   const NavigationButtonList({super.key});
@@ -26,22 +25,22 @@ class NavigationButtonList extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: const Color.fromARGB(255, 2, 2, 20)),
                   )),
-              if (!Responsive.isLargeMobile(context))
-                TextButton(
-                    onPressed: () {
-                      controller.animateToPage(1,
-                          duration: const Duration(milliseconds: 500),
-                          curve: Curves.easeIn);
-                    },
-                    child: Text(
-                      'About Me',
-                      style: Theme.of(context).textTheme.labelMedium!.copyWith(
-                          fontWeight: FontWeight.bold,
-                          color: const Color.fromARGB(255, 2, 2, 20)),
-                    )),
+              // if (!Responsive.isLargeMobile(context))
+              //   TextButton(
+              //       onPressed: () {
+              //         controller.animateToPage(1,
+              //             duration: const Duration(milliseconds: 500),
+              //             curve: Curves.easeIn);
+              //       },
+              //       child: Text(
+              //         'About Me',
+              //         style: Theme.of(context).textTheme.labelMedium!.copyWith(
+              //             fontWeight: FontWeight.bold,
+              //             color: const Color.fromARGB(255, 2, 2, 20)),
+              //       )),
               TextButton(
                   onPressed: () {
-                    controller.animateToPage(2,
+                    controller.animateToPage(1,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },
@@ -53,7 +52,7 @@ class NavigationButtonList extends StatelessWidget {
                   )),
               TextButton(
                   onPressed: () {
-                    controller.animateToPage(3,
+                    controller.animateToPage(2,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
                   },

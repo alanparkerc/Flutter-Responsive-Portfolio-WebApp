@@ -19,13 +19,6 @@ class DownloadButton extends StatelessWidget {
             vertical: defaultPadding / 1.5, horizontal: defaultPadding * 2),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Colors.pink,
-                Colors.blue.shade900,
-              ]),
         ),
         child: Row(
           children: [
