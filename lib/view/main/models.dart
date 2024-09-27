@@ -45,7 +45,7 @@ List<Project> projectList = [
       'REACH To Go',
       'REACH To Go offers Franchise Focused Marketing clients convenient mobile access to their REACH dashboard. With this app, users can easily view full campaign metrics, notes, and leads, even when away from their computer. Developed using Dart and Flutter, REACH To Go seamlessly connects to custom API endpoints, ensuring real-time data access on the go.',
       'assets/images/chat.png',
-      'https://github.com/alanparkerc/reach_application'),
+      'https://github.com/alanparkerc/reach_to_go'),
   Project(
       'Sales Prospects ',
       'I developed a Sales Prospects Pipeline using Dart and Flutter, designed to manage sales leads and support the business development team in effectively pursuing new opportunities. This tool centralizes lead tracking and streamlines the process, helping the team stay organized and focused on driving growth.',
